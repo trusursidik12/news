@@ -86,7 +86,7 @@ class B_blogs extends CI_Controller {
 			date_default_timezone_set('Asia/Jakarta');
 			$slug 					= url_title($this->input->post('blg_title'));
 			$rename = date('d-m-Y His ').strtolower($slug);
-			$config['file_name'] = $rename;
+			// $config['file_name'] = $rename;
 
 			$this->load->library('upload', $config);
 
