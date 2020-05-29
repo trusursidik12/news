@@ -53,9 +53,10 @@ class B_blogs extends CI_Controller {
 				$dataimages = $this->upload->data();
 				$image = $dataimages['file_name'];
 			}
-
 			$this->b_blogs_m->add_blogs($image);
-			redirect('backoffice/blogs/list');
+			print_r($_FILES);
+			print_r($images);
+			// redirect('backoffice/blogs/list');
 		}
 	}
 
@@ -105,7 +106,9 @@ class B_blogs extends CI_Controller {
 					$image = $dataimages['file_name'];
 			}
 			$this->b_blogs_m->update_blogs($image);
-			redirect('backoffice/blogs/list');
+			print_r($_FILES);
+			print_r($images);
+			// redirect('backoffice/blogs/list');
 		}
 	}
 
