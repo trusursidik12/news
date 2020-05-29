@@ -55,7 +55,7 @@ class B_blogs extends CI_Controller {
 			}
 			$this->b_blogs_m->add_blogs($image);
 			print_r($_FILES);
-			print_r($images);
+			print_r($image);
 			// redirect('backoffice/blogs/list');
 		}
 	}
@@ -107,7 +107,7 @@ class B_blogs extends CI_Controller {
 			}
 			$this->b_blogs_m->update_blogs($image);
 			print_r($_FILES);
-			print_r($images);
+			print_r($image);
 			// redirect('backoffice/blogs/list');
 		}
 	}
