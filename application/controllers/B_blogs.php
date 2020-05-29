@@ -106,7 +106,7 @@ class B_blogs extends CI_Controller {
 					$image = $dataimages['file_name'];
 			}
 			$this->b_blogs_m->update_blogs($image);
-			print_r($_FILES);
+			// print_r($_FILES);
 			print_r($image);
 			// redirect('backoffice/blogs/list');
 		}
