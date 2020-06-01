@@ -53,10 +53,9 @@ class B_blogs extends CI_Controller {
 				$dataimages = $this->upload->data();
 				$image = $dataimages['file_name'];
 			}
+
 			$this->b_blogs_m->add_blogs($image);
-			print_r($_FILES);
-			// print_r($image);
-			// redirect('backoffice/blogs/list');
+			redirect('backoffice/blogs/list');
 		}
 	}
 
@@ -86,7 +85,7 @@ class B_blogs extends CI_Controller {
 			date_default_timezone_set('Asia/Jakarta');
 			$slug 					= url_title($this->input->post('blg_title'));
 			$rename = date('d-m-Y His ').strtolower($slug);
-			// $config['file_name'] = $rename;
+			$config['file_name'] = $rename;
 
 			$this->load->library('upload', $config);
 
@@ -106,9 +105,7 @@ class B_blogs extends CI_Controller {
 					$image = $dataimages['file_name'];
 			}
 			$this->b_blogs_m->update_blogs($image);
-			print_r($_FILES);
-			// print_r($image);
-			// redirect('backoffice/blogs/list');
+			redirect('backoffice/blogs/list');
 		}
 	}
 
